@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:include page="common/menu.jsp" flush = "false"></jsp:include>
+	<jsp:include page="common/menu-login.jsp" flush = "false"></jsp:include>
 	<jsp:include page="member/Login.jsp" flush = "false"></jsp:include>
 </body>
 </html>

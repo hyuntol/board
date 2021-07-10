@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
 		if(login != null) {
 		nextPage = "main";
 		session.setAttribute("login", login);
-		System.out.println("로그인 성공 - " + login);
+		System.out.println("로그인 성공  " + login);
 		}else{
 			nextPage = "LoginUIServlet";
 		}
