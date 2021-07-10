@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/custom.css">
-<title>Login</title>
+<title>메인</title>
 </head>
 <body>
 

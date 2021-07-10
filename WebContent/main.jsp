@@ -10,25 +10,12 @@
 <!-- 루트 폴더에 부트스트랩을 참조하는 링크 -->
 <link rel="stylesheet" href="css/bootstrap.css">
 <title>메인</title>
-<%
-   String mesg = (String)session.getAttribute("mesg");
-   MemberDTO mdto = (MemberDTO)session.getAttribute("mdto");
-   if(mdto != null){
-%>
-<script type="text/javascript">
-     alert('<%=mesg%>');
-   </script>
-<% 
-session.removeAttribute("mesg");
-}%>
+
 </head>
 <body>
 	<%
-		// 메인 페이지로 이동했을 때 세션에 값이 담겨있는지 체크
-		String u_id = null;
-		if(session.getAttribute("login") != null){
-			u_id = (String)session.getAttribute("u_id");
-		}
+		MemberDTO login = (MemberDTO)session.getAttribute("login");
+	
 	%>
 	<nav class="navbar navbar-default"> <!-- 네비게이션 -->
 		<div class="navbar-header"> 	<!-- 네비게이션 상단 부분 -->
@@ -52,7 +39,7 @@ session.removeAttribute("mesg");
 			</ul>
 			<%
 				// 로그인 하지 않았을 때 보여지는 화면
-				if(u_id == null){
+				if(login == null){
 			%>
 			<!-- 헤더 우측에 나타나는 드랍다운 영역 -->
 			<ul class="nav navbar-nav navbar-right">
