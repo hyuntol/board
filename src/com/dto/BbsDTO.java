@@ -2,7 +2,7 @@ package com.dto;
 
 public class BbsDTO {
 
-	private int bbsID;
+	private int bbsNum;
 	private String bbsTitle;
 	private String userid;
 	private String bbsDate;
@@ -14,9 +14,9 @@ public class BbsDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public BbsDTO(int bbsID, String bbsTitle, String userid, String bbsDate, String bbsContent, int bbsAvailable) {
+	public BbsDTO(int bbsNum, String bbsTitle, String userid, String bbsDate, String bbsContent, int bbsAvailable) {
 		super();
-		this.bbsID = bbsID;
+		this.bbsNum = bbsNum;
 		this.bbsTitle = bbsTitle;
 		this.userid = userid;
 		this.bbsDate = bbsDate;
@@ -24,12 +24,12 @@ public class BbsDTO {
 		this.bbsAvailable = bbsAvailable;
 	}
 
-	public int getBbsID() {
-		return bbsID;
+	public int getBbsNum() {
+		return bbsNum;
 	}
 
-	public void setBbsID(int bbsID) {
-		this.bbsID = bbsID;
+	public void setBbsNum(int bbsNum) {
+		this.bbsNum = bbsNum;
 	}
 
 	public String getBbsTitle() {
@@ -74,7 +74,7 @@ public class BbsDTO {
 
 	@Override
 	public String toString() {
-		return "BoardDTO [bbsID=" + bbsID + ", bbsTitle=" + bbsTitle + ", userid=" + userid + ", bbsDate=" + bbsDate
+		return "BbsDTO [bbsNum=" + bbsNum + ", bbsTitle=" + bbsTitle + ", userid=" + userid + ", bbsDate=" + bbsDate
 				+ ", bbsContent=" + bbsContent + ", bbsAvailable=" + bbsAvailable + "]";
 	}
 
