@@ -24,7 +24,6 @@ public class BbsService {
 
 	public int writebbs(BbsDTO bdto) {
 		SqlSession session = MySqlSessionFactory.getSession();
-		System.out.println("서비스 출력 ------------------");
 		int n = 0;
 		try {
 			BbsDAO dao = new BbsDAO();

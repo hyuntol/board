@@ -20,8 +20,8 @@ public class WriteServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		response.setContentType("text/html; charset=utf-8");
-		
+		request.setCharacterEncoding("UTF-8");
+	
 		HttpSession session = request.getSession();
 		MemberDTO mdto = (MemberDTO) session.getAttribute("login");
 		String u_id = mdto.getU_id();
