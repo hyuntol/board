@@ -52,28 +52,27 @@
 					for(int i=0; i<list.size(); i++){
 						BbsDTO dto = list.get(i);
 						
-						int bbsNum = dto.getBbsNum();
-						String bbsTitle = dto.getBbsTitle();
+						int bbsNum = dto.getBbsnum();
+						String bbsTitle = dto.getBbstitle();
 						String userid = dto.getUserid();
-						String bbsDate = dto.getBbsDate();
-						String bbsContent = dto.getBbsContent();
-						int bbsAvailable = dto.getBbsAvailable();
-					
-					
+						String bbsDate = dto.getBbsdate();
+						String bbsContent = dto.getBbscontent();
+						int bbsAvailable = dto.getBbsavailable();
+			
 				%>
 				<tbody>
 					<tr>
 						<td><%=bbsNum%></td>
 						<td><%=bbsTitle%></td>
 						<td><%=userid%></td>
-						<td><%=bbsDate%></td>	
+						<td><%=bbsDate%></td>
 					</tr>
-				
 				</tbody>
-			</table>
 				<%
 					}
 					%>
+			</table>
+
 			<a href="wirte.jsp" class="btn btn-primary" id="write">글쓰기</a>
 		</div>
 	</div>

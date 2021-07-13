@@ -20,6 +20,8 @@ public class ListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		response.setContentType("text/html; charset=utf-8");
+		
 		BbsService service = new BbsService();
 
 		List<BbsDTO> list = service.Bbslist();

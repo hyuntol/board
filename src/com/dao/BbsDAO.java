@@ -13,4 +13,10 @@ public class BbsDAO {
 		return list;
 	}
 
+	public int writebbs(SqlSession session, BbsDTO bdto) {
+		int n = session.insert("BbsMapper.writebbs",bdto);
+		System.out.println("디에이오 출력 --------------------");
+		return n;
+	}
+
 }

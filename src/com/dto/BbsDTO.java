@@ -2,42 +2,42 @@ package com.dto;
 
 public class BbsDTO {
 
-	private int bbsNum;
-	private String bbsTitle;
+	private int bbsnum;
+	private String bbstitle;
 	private String userid;
-	private String bbsDate;
-	private String bbsContent;
-	private int bbsAvailable;
+	private String bbsdate;
+	private String bbscontent;
+	private int bbsavailable;
 
 	public BbsDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public BbsDTO(int bbsNum, String bbsTitle, String userid, String bbsDate, String bbsContent, int bbsAvailable) {
+	public BbsDTO(int bbsnum, String bbstitle, String userid, String bbsdate, String bbscontent, int bbsavailable) {
 		super();
-		this.bbsNum = bbsNum;
-		this.bbsTitle = bbsTitle;
+		this.bbsnum = bbsnum;
+		this.bbstitle = bbstitle;
 		this.userid = userid;
-		this.bbsDate = bbsDate;
-		this.bbsContent = bbsContent;
-		this.bbsAvailable = bbsAvailable;
+		this.bbsdate = bbsdate;
+		this.bbscontent = bbscontent;
+		this.bbsavailable = bbsavailable;
 	}
 
-	public int getBbsNum() {
-		return bbsNum;
+	public int getBbsnum() {
+		return bbsnum;
 	}
 
-	public void setBbsNum(int bbsNum) {
-		this.bbsNum = bbsNum;
+	public void setBbsnum(int bbsnum) {
+		this.bbsnum = bbsnum;
 	}
 
-	public String getBbsTitle() {
-		return bbsTitle;
+	public String getBbstitle() {
+		return bbstitle;
 	}
 
-	public void setBbsTitle(String bbsTitle) {
-		this.bbsTitle = bbsTitle;
+	public void setBbstitle(String bbstitle) {
+		this.bbstitle = bbstitle;
 	}
 
 	public String getUserid() {
@@ -48,34 +48,34 @@ public class BbsDTO {
 		this.userid = userid;
 	}
 
-	public String getBbsDate() {
-		return bbsDate;
+	public String getBbsdate() {
+		return bbsdate;
 	}
 
-	public void setBbsDate(String bbsDate) {
-		this.bbsDate = bbsDate;
+	public void setBbsdate(String bbsdate) {
+		this.bbsdate = bbsdate;
 	}
 
-	public String getBbsContent() {
-		return bbsContent;
+	public String getBbscontent() {
+		return bbscontent;
 	}
 
-	public void setBbsContent(String bbsContent) {
-		this.bbsContent = bbsContent;
+	public void setBbscontent(String bbscontent) {
+		this.bbscontent = bbscontent;
 	}
 
-	public int getBbsAvailable() {
-		return bbsAvailable;
+	public int getBbsavailable() {
+		return bbsavailable;
 	}
 
-	public void setBbsAvailable(int bbsAvailable) {
-		this.bbsAvailable = bbsAvailable;
+	public void setBbsavailable(int bbsavailable) {
+		this.bbsavailable = bbsavailable;
 	}
 
 	@Override
 	public String toString() {
-		return "BbsDTO [bbsNum=" + bbsNum + ", bbsTitle=" + bbsTitle + ", userid=" + userid + ", bbsDate=" + bbsDate
-				+ ", bbsContent=" + bbsContent + ", bbsAvailable=" + bbsAvailable + "]";
+		return "BbsDTO [bbsnum=" + bbsnum + ", bbstitle=" + bbstitle + ", userid=" + userid + ", bbsdate=" + bbsdate
+				+ ", bbscontent=" + bbscontent + ", bbsavailable=" + bbsavailable + "]";
 	}
 
 }

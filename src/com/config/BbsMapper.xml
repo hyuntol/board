@@ -5,8 +5,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="BbsMapper">
 
 	<select id="Bbslist" resultType="BbsDTO" parameterType="list">
-		select bbsnum, bbstitle, userid,
+		select
+		bbsnum, bbstitle, userid,
 		to_char(bbsdate, 'yyyy/MM/dd')bbsdate from
 		bbs
 	</select>
+
+	<insert id="writebbs" parameterType="BbsDTO">
+		insert into bbs(bbsnum, bbstitle, userid, bbscontent, bbsavailable)
+		values(bbsnum.nextval,#{bbstitle},#{userid},#{bbscontent},#{bbsavailable})
+	</insert>
 </mapper>
