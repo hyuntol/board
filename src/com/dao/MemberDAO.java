@@ -10,7 +10,6 @@ public class MemberDAO {
 
 	public int memberAdd(SqlSession session, MemberDTO mdto) {
 		int n = session.insert("MemberMapper.MemberAdd", mdto);
-		System.out.println("========== dao");
 		return n;
 	}
 

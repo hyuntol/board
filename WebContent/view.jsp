@@ -8,6 +8,6 @@
 </head>
 <body>
  <jsp:include page="common/menu-bbs.jsp" flush="false"></jsp:include>
- <jsp:include page="board/write.jsp" flush="false"></jsp:include>
+ <jsp:include page="board/view.jsp" flush="false"></jsp:include>
 </body>
 </html>

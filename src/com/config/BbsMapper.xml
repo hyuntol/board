@@ -3,16 +3,23 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="BbsMapper">
-
+	
+	<!--게시글 목록  -->
 	<select id="Bbslist" resultType="BbsDTO" parameterType="list">
 		select
 		bbsnum, bbstitle, userid,
 		to_char(bbsdate, 'yyyy/MM/dd')bbsdate from
-		bbs
+		bbs where bbsavailable = 0 order by bbsnum desc
 	</select>
-
+	
+	<!--게시글 추가 -->
 	<insert id="writebbs" parameterType="BbsDTO">
 		insert into bbs(bbsnum, bbstitle, userid, bbscontent, bbsavailable)
 		values(bbsnum.nextval,#{bbstitle},#{userid},#{bbscontent},#{bbsavailable})
 	</insert>
+	
+	<!--게시글 보기  -->
+	<select id="viewbbs" resultType="BbsDTO" parameterType="int">
+		select * from bbs where bbsnum=#{bbsnum}
+	</select>
 </mapper>

@@ -52,20 +52,20 @@
 					for(int i=0; i<list.size(); i++){
 						BbsDTO dto = list.get(i);
 						
-						int bbsNum = dto.getBbsnum();
-						String bbsTitle = dto.getBbstitle();
+						int bbsnum = dto.getBbsnum();
+						String bbstitle = dto.getBbstitle();
 						String userid = dto.getUserid();
-						String bbsDate = dto.getBbsdate();
-						String bbsContent = dto.getBbscontent();
-						int bbsAvailable = dto.getBbsavailable();
+						String bbsdate = dto.getBbsdate();
+						String bbscontent = dto.getBbscontent();
+						int bbsavailable = dto.getBbsavailable();
 			
 				%>
 				<tbody>
 					<tr>
-						<td><%=bbsNum%></td>
-						<td><%=bbsTitle%></td>
+						<td><%=bbsnum%></td>
+						<td><a href="ViewServlet?bbsnum=<%=bbsnum%>" name ="bbsnum"><%=bbstitle%></td>
 						<td><%=userid%></td>
-						<td><%=bbsDate%></td>
+						<td><%=bbsdate%></td>
 					</tr>
 				</tbody>
 				<%

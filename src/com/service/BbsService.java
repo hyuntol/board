@@ -35,4 +35,16 @@ public class BbsService {
 		return n;
 	}
 
+	public BbsDTO viewbbs(int bbsnum) {
+		SqlSession session = MySqlSessionFactory.getSession();
+		BbsDTO dto = null;
+		try {
+			BbsDAO dao = new BbsDAO();
+			dto = dao.viewbbs(session, bbsnum);
+		}finally {
+			session.close();
+		}
+		return dto;
+	}
+
 }

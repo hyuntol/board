@@ -16,7 +16,6 @@ public class MemberService {
 		try {
 			MemberDAO dao = new MemberDAO();
 			n = dao.memberAdd(session, mdto);
-			System.out.println("========== service");
 			session.commit();
 		}finally {
 			session.close();
