@@ -23,7 +23,6 @@ public class LoginUIServlet extends HttpServlet {
 		out.println("location.href='login.jsp'");
 		out.println("</script>");
 		
-		//response.sendRedirect("login.jsp");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

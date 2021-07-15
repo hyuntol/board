@@ -56,21 +56,19 @@
 						String bbstitle = dto.getBbstitle();
 						String userid = dto.getUserid();
 						String bbsdate = dto.getBbsdate();
-						String bbscontent = dto.getBbscontent();
-						int bbsavailable = dto.getBbsavailable();
 			
 				%>
 				<tbody>
 					<tr>
 						<td><%=bbsnum%></td>
-						<td><a href="ViewServlet?bbsnum=<%=bbsnum%>" name ="bbsnum"><%=bbstitle%></td>
+						<td><a href="ViewServlet?bbsnum=<%=bbsnum%>"><%=bbstitle%></td>
 						<td><%=userid%></td>
 						<td><%=bbsdate%></td>
 					</tr>
 				</tbody>
 				<%
 					}
-					%>
+				%>
 			</table>
 
 			<a href="wirte.jsp" class="btn btn-primary" id="write">글쓰기</a>

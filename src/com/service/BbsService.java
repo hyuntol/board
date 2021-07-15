@@ -47,4 +47,18 @@ public class BbsService {
 		return dto;
 	}
 
+	
+
+	public void updatebbs(BbsDTO dto) {
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			BbsDAO dao = new BbsDAO();
+			dao.updatebbs(session, dto);
+			session.commit();
+		} finally {
+			session.close();
+		}
+		
+	}
+
 }

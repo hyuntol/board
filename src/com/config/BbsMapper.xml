@@ -22,4 +22,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="viewbbs" resultType="BbsDTO" parameterType="int">
 		select * from bbs where bbsnum=#{bbsnum}
 	</select>
+	
+	<!-- 게시글 수정  -->
+	<update id="updatebbs" parameterType="BbsDTO">
+	update bbs
+		set bbstitle = #{bbstitle},
+		bbscontent = #{bbscontent}
+		where bbsnum = #{bbsnum}
+	</update>
 </mapper>

@@ -23,5 +23,9 @@ public class BbsDAO {
 		return dto;
 	}
 
+	public void updatebbs(SqlSession session, BbsDTO dto) {
+		session.update("BbsMapper.updatebbs" + dto);	
+	}
+
 	
 }

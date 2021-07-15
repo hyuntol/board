@@ -14,9 +14,7 @@ import javax.servlet.http.HttpSession;
 import com.dto.MemberDTO;
 import com.service.MemberService;
 
-/**
- * Servlet implementation class LoginServlet
- */
+
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 
@@ -33,6 +31,7 @@ public class LoginServlet extends HttpServlet {
 		MemberDTO login = service.login(map);
 		String nextPage = null;
 		HttpSession session = request.getSession();
+		
 		if(login != null) {
 		nextPage = "main";
 		session.setAttribute("login", login);
@@ -40,12 +39,13 @@ public class LoginServlet extends HttpServlet {
 		}else{
 			nextPage = "LoginUIServlet";
 		}
+		
 			response.sendRedirect(nextPage);	
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		doGet(request, response);
 	}
 

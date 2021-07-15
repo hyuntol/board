@@ -28,8 +28,7 @@ public class ListServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("list", list);
 		
-		RequestDispatcher dis = request.getRequestDispatcher("bbs.jsp");
-		dis.forward(request, response);
+		response.sendRedirect("bbs.jsp");
 		
 	}
 
