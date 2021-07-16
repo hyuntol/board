@@ -24,7 +24,13 @@ public class BbsDAO {
 	}
 
 	public void updatebbs(SqlSession session, BbsDTO dto) {
-		session.update("BbsMapper.updatebbs" + dto);	
+		 session.update("BbsMapper.updatebbs" + dto);
+		
+	}
+
+	public void deletebbs(SqlSession session, int bbsnum) {
+		session.update("BbsMapper.deletebbs",bbsnum);
+		
 	}
 
 	

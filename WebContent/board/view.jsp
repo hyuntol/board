@@ -15,6 +15,7 @@
 
 	<%
 		BbsDTO view = (BbsDTO) session.getAttribute("view");
+		int bbsnum = view.getBbsnum();
 		String bbstitle = view.getBbstitle();
 		String userid = view.getUserid();
 		String bbsdate = view.getBbsdate();
@@ -56,8 +57,8 @@
 			<%
 				 if (login != null && userid.equals(login.getU_id()))  {
 			%>
-			<a href="UpdateUIServlet" class="btn btn-primary">수정</a>
-			<a href="DeleteServlet" class="btn btn-primary">삭제</a>
+			<a href="update.jsp" class="btn btn-primary">수정</a>
+			<a href="DeleteServlet?bbsnum=<%=bbsnum%>" class="btn btn-primary" onclick="return confirm('정말로 삭제하시겠습니까?')">삭제</a>
 			<%
 				}
 			%>

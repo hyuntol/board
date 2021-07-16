@@ -58,6 +58,17 @@ public class BbsService {
 		} finally {
 			session.close();
 		}
+	}
+
+	public void deletebbs(int bbsnum) {
+		SqlSession session = MySqlSessionFactory.getSession();
+		try {
+			BbsDAO dao = new BbsDAO();
+			dao.deletebbs(session, bbsnum);
+			session.commit();
+		} finally {
+			session.close();
+		}
 		
 	}
 

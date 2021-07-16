@@ -5,20 +5,32 @@
 <head>
 <meta charset="UTF-8">
 <!-- 화면 최적화 -->
-<meta name="viewport" content="width-device-width", initial-scale="1">
+<meta name="viewport" content="width-device-width" , initial-scale="1">
 <!-- 루트 폴더에 부트스트랩을 참조하는 링크 -->
 <link rel="stylesheet" href="css/bootstrap.css">
 <title>글쓰기</title>
 </head>
-<body>
 <%
-	BbsDTO view = (BbsDTO)session.getAttribute("view");
+	BbsDTO view = (BbsDTO) session.getAttribute("view");
+	int bbsnum = view.getBbsnum();
 	String bbstitle = view.getBbstitle();
 	String bbscontent = view.getBbscontent();
 %>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".update").click(function(){
+			console.log(<%=bbsnum%>);
+			console.log(<%=bbstitle%>);
+			console.log(<%=bbscontent%>);
+		})
+	})
+</script>
+<body>
+	
 	<div class="container">
 		<div class="row">
-			<form method="post" action="UpdateServlet">
+			<form method="post">
 				<table class="table table-striped" style="text-align: center; boder: 1px solid #dddddd;">
 					<thead>
 						<tr>
@@ -26,6 +38,9 @@
 						</tr>
 					</thead>
 					<tbody>
+					<tr>
+		 					<td><input type="hidden" name="bbsnum" value="<%=bbsnum%>"></td>
+						</tr>
 						<tr>
 							<td><input type="text" class="form-control" placeholder="글 제목" name="bbstitle" maxlength="50" value="<%=bbstitle%>"></td>
 						</tr>
@@ -34,7 +49,7 @@
 						</tr>
 					</tbody>
 				</table>
-				<input type="submit" class="btn btn-primary" value="글수정">
+				<a href="#" class="btn btn-primary update">글수정</a>
 			</form>
 		</div>
 	</div>

@@ -30,4 +30,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		bbscontent = #{bbscontent}
 		where bbsnum = #{bbsnum}
 	</update>
+	
+	<!-- 게시물 삭제  -->
+	<update id="deletebbs" parameterType="int">
+	update bbs
+	set bbsavailable = 1
+	where bbsnum = #{bbsnum}
+	</update>
 </mapper>
