@@ -16,21 +16,12 @@
 	String bbstitle = view.getBbstitle();
 	String bbscontent = view.getBbscontent();
 %>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script type="text/javascript">
-	$(function(){
-		$(".update").click(function(){
-			console.log(<%=bbsnum%>);
-			console.log(<%=bbstitle%>);
-			console.log(<%=bbscontent%>);
-		})
-	})
-</script>
+
 <body>
 	
 	<div class="container">
 		<div class="row">
-			<form method="post">
+			<form method="post" action="UpdateServlet?bbsnum=<%=bbsnum%>">
 				<table class="table table-striped" style="text-align: center; boder: 1px solid #dddddd;">
 					<thead>
 						<tr>
@@ -38,9 +29,6 @@
 						</tr>
 					</thead>
 					<tbody>
-					<tr>
-		 					<td><input type="hidden" name="bbsnum" value="<%=bbsnum%>"></td>
-						</tr>
 						<tr>
 							<td><input type="text" class="form-control" placeholder="글 제목" name="bbstitle" maxlength="50" value="<%=bbstitle%>"></td>
 						</tr>
@@ -49,7 +37,7 @@
 						</tr>
 					</tbody>
 				</table>
-				<a href="#" class="btn btn-primary update">글수정</a>
+				<button type="submit" class="btn btn-primary">글수정</button>
 			</form>
 		</div>
 	</div>

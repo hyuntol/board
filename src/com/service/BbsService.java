@@ -47,8 +47,6 @@ public class BbsService {
 		return dto;
 	}
 
-	
-
 	public void updatebbs(BbsDTO dto) {
 		SqlSession session = MySqlSessionFactory.getSession();
 		try {
@@ -58,6 +56,7 @@ public class BbsService {
 		} finally {
 			session.close();
 		}
+		
 	}
 
 	public void deletebbs(int bbsnum) {
@@ -71,5 +70,7 @@ public class BbsService {
 		}
 		
 	}
+
+	
 
 }

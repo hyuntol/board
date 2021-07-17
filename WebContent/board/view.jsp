@@ -57,7 +57,7 @@
 			<%
 				 if (login != null && userid.equals(login.getU_id()))  {
 			%>
-			<a href="update.jsp" class="btn btn-primary">수정</a>
+			<a href="update.jsp?bbsnum=<%=bbsnum%>" class="btn btn-primary">수정</a>
 			<a href="DeleteServlet?bbsnum=<%=bbsnum%>" class="btn btn-primary" onclick="return confirm('정말로 삭제하시겠습니까?')">삭제</a>
 			<%
 				}
